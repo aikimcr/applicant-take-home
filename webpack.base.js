@@ -26,7 +26,7 @@ module.exports = {
             },
 			{
 				test: /\.(less|css)$/,
-				use: [
+				loaders: [
 					'style-loader', 
 					{loader: 'css-loader'}, 
 					{loader: 'less-loader'},
