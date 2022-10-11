@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test CheckoutOptions Component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="checkout-options"
+  >
+    <div
+      class="grid grid--top-bottom grid-stretch-top"
+    >
+      <div
+        class="grid__item"
+      >
+        <header>
+          Select Redemption Amount
+        </header>
+      </div>
+      <div
+        class="grid__item"
+      >
+        <section
+          class="options-list"
+        >
+          <section
+            class="checkout-options-buttons"
+          >
+            <div
+              class="grid"
+            >
+              <div
+                class="grid__item"
+              >
+                <div
+                  class="checkout-radio"
+                >
+                  <input
+                    checked=""
+                    id="checkout-option-button-775af84c-d388-4da7-b4cf-89f7fee1ebda"
+                    name="giftcard-option"
+                    type="radio"
+                    value="1470"
+                  />
+                  <label
+                    for="checkout-option-button-775af84c-d388-4da7-b4cf-89f7fee1ebda"
+                  >
+                    $14.70
+                  </label>
+                </div>
+              </div>
+              <div
+                class="grid__item"
+              >
+                <div
+                  class="checkout-radio"
+                >
+                  <input
+                    id="checkout-option-button-21a2b9c5-f668-4c04-907b-019c53d72074"
+                    name="giftcard-option"
+                    type="radio"
+                    value="2450"
+                  />
+                  <label
+                    for="checkout-option-button-21a2b9c5-f668-4c04-907b-019c53d72074"
+                  >
+                    $24.50
+                  </label>
+                </div>
+              </div>
+              <div
+                class="grid__item"
+              >
+                <div
+                  class="checkout-radio"
+                >
+                  <input
+                    id="checkout-option-button-24ed1a3d-8d86-4c7f-8bc8-1f4c3e6399b8"
+                    name="giftcard-option"
+                    type="radio"
+                    value="4900"
+                  />
+                  <label
+                    for="checkout-option-button-24ed1a3d-8d86-4c7f-8bc8-1f4c3e6399b8"
+                  >
+                    $49.00
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+      <div
+        class="grid__item"
+      >
+        <section
+          class="checkout-cost-summary"
+        >
+          <div
+            class="grid"
+          >
+            <label>
+              Redemption Amount
+            </label>
+            <div
+              class="value"
+            >
+              $14.70
+            </div>
+            <label
+              class="bonus-line"
+            >
+              Prizeout Bonus(2.04%)
+            </label>
+            <div
+              class="value bonus-line"
+            >
+              $0.30
+            </div>
+            <label>
+              You Get
+            </label>
+            <div
+              class="value"
+            >
+              15.00
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

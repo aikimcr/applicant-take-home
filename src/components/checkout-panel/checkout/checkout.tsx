@@ -1,22 +1,46 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useAppSelector } from '../../../hooks';
-import { getActiveOffer } from '../../../slices/offers-slice';
+import { getActiveOffer, getCurrentOfferRequest } from '../../../slices/offers-slice';
 import { GiftCard } from '../../common';
-import checkoutPanelViewWrapper from '../view-wrapper';
+import checkoutPanelViewWrapper, { SetViewProps } from '../view-wrapper';
 import CheckoutButton from './checkout-button';
 import CheckoutOptions from './checkout-options';
 
 import './checkout.less';
 
-const CheckoutPanelView: React.FC = (): React.ReactElement => {
+async function fakeFetcher(url: any, options: any) {
+    console.log(url, options);
+    return { msg: 'Okay' };
+}
+
+const CheckoutPanelView: React.FC<SetViewProps> = ({ setView }): React.ReactElement => {
     const activeOffer = useAppSelector(getActiveOffer);
+    const offerRequest = useAppSelector(getCurrentOfferRequest);
+
+    async function doCheckout() {
+        if (offerRequest == null) {
+            return;
+        }
+
+        await fakeFetcher('fake_host/checkout', {
+            body: JSON.stringify(offerRequest),
+            headers: {
+                'content-type': 'application/json',
+            },
+            method: 'POST',
+            mode: 'cors',
+        });
+
+        setView('checkout-confirmation');
+    }
 
     return (
         <section className="checkout">
-            <div className="grid grid--top-bottom grid--stretch-top">
-                <div className="grid__item">
-                    <section className="checkout__brand">
-                        {activeOffer ? (
+            {activeOffer ? (
+                <div className="grid grid--top-bottom grid--stretch-top">
+                    <div className="grid__item">
+                        <section className="checkout__brand">
                             <div className="grid grid--top-bottom grid-stretch-top">
                                 <div className="grid__item">
                                     <GiftCard
@@ -30,17 +54,21 @@ const CheckoutPanelView: React.FC = (): React.ReactElement => {
                                     <CheckoutOptions offer={activeOffer} />
                                 </div>
                             </div>
-                        ) : null}
-                    </section>
+                        </section>
+                    </div>
+                    <div className="grid__item">
+                        <section className="checkout__calculation">
+                            <CheckoutButton onClick={doCheckout} />
+                        </section>
+                    </div>
                 </div>
-                <div className="grid__item">
-                    <section className="checkout__calculation">
-                        <CheckoutButton />
-                    </section>
-                </div>
-            </div>
+            ) : null}
         </section>
     );
+};
+
+CheckoutPanelView.propTypes = {
+    setView: PropTypes.func,
 };
 
 export default checkoutPanelViewWrapper(CheckoutPanelView, 'checkout');

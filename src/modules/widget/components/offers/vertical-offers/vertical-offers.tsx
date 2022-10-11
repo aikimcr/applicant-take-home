@@ -6,7 +6,7 @@ import { useAppSelector } from '../../../../../hooks';
 import { selectIsCheckoutPanelCollapsed } from '../../../../../slices/common-slice';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../../../../store';
-import { toggleIsCollapsedCheckoutPanelOpen } from '../../../../../slices/checkout-slice';
+import { setCheckoutView, toggleIsCollapsedCheckoutPanelOpen } from '../../../../../slices/checkout-slice';
 
 import './vertical-offers.less';
 
@@ -26,6 +26,7 @@ const VerticalOffers: React.FC<OfferView> = ({ offers, viewSettings }): React.Re
             dispatch(toggleIsCollapsedCheckoutPanelOpen());
         }
 
+        dispatch(setCheckoutView('checkout'));
         dispatch(setActiveOffer(offer));
     };
 

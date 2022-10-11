@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test CheckoutButtone Component matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="Prizeout your gift card"
+    class="button button--primary button--medium"
+    data-testid="button"
+    title="Prizeout Gift Card"
+    type="submit"
+  >
+    <span>
+      Prizeout Gift Card
+    </span>
+  </button>
+</DocumentFragment>
+`;

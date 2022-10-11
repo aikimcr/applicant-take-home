@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test CheckoutOptionsButtonse Component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="checkout-options-buttons"
+  >
+    <div
+      class="grid"
+    >
+      <div
+        class="grid__item"
+      >
+        <div
+          class="checkout-radio"
+        >
+          <input
+            checked=""
+            id="checkout-option-button-xyzzy1"
+            name="giftcard-option"
+            type="radio"
+            value="340"
+          />
+          <label
+            for="checkout-option-button-xyzzy1"
+          >
+            $3.40
+          </label>
+        </div>
+      </div>
+      <div
+        class="grid__item"
+      >
+        <div
+          class="checkout-radio"
+        >
+          <input
+            id="checkout-option-button-xyzzy2"
+            name="giftcard-option"
+            type="radio"
+            value="1020"
+          />
+          <label
+            for="checkout-option-button-xyzzy2"
+          >
+            $10.20
+          </label>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

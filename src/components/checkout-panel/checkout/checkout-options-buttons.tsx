@@ -10,7 +10,7 @@ interface CheckoutOptionsButtonsProps {
     onNewGiftCard: (newIndex: number) => void;
 }
 
-const CheckoutOptionsButtons: React.FC<CheckoutOptionsButtonsProps> = ({
+export const CheckoutOptionsButtons: React.FC<CheckoutOptionsButtonsProps> = ({
     giftcardList,
     onNewGiftCard,
 }): React.ReactElement => {
