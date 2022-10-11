@@ -8,11 +8,11 @@ import CheckoutOptionsButtons from './checkout-options-buttons';
 
 import './checkout.less';
 
-interface CheckoutOptions {
+interface CheckoutOptionsProps {
     offer: PrizeoutOffer;
 }
 
-const CheckoutOptions: React.FC<CheckoutOptions> = ({ offer }): React.ReactElement => {
+export const CheckoutOptions: React.FC<CheckoutOptionsProps> = ({ offer }): React.ReactElement => {
     const giftCardIndex = useAppSelector(getCurrentGiftCardIndex);
     const dispatch = useDispatch<AppDispatch>();
 

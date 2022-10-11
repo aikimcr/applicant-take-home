@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test CheckoutCostSummary Component matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="checkout-cost-summary"
+  >
+    <div
+      class="grid"
+    >
+      <label>
+        Redemption Amount
+      </label>
+      <div
+        class="value"
+      >
+        $12.12
+      </div>
+      <label
+        class="bonus-line"
+      >
+        Prizeout Bonus(33%)
+      </label>
+      <div
+        class="value bonus-line"
+      >
+        $4.00
+      </div>
+      <label>
+        You Get
+      </label>
+      <div
+        class="value"
+      >
+        16.12
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

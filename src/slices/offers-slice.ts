@@ -738,25 +738,11 @@ export const getCurrentOfferRequest = ({ offers }: RootState): OffersRequest => 
 
     const giftcard = offers.activeOffer.giftcard_list[offers.giftCardIndex];
 
-    let bonus = 0;
-    let finalValue = giftcard.cost_in_cents;
-
-    if (giftcard.display_bonus != null || giftcard.display_monetary_bonus != null) {
-        if (giftcard.display_bonus == null) {
-            bonus = giftcard.display_monetary_bonus;
-        } else {
-            const bonusPercent = giftcard.display_bonus / 10;
-            bonus = Math.round(giftcard.cost_in_cents * bonusPercent) / 100;
-        }
-    }
-
-    finalValue = giftcard.cost_in_cents + bonus;
-
     return {
         checkout_value_id: giftcard.checkout_value_id,
         cost_in_cents: giftcard.cost_in_cents,
         name: offers.activeOffer.name,
-        value_in_cents: finalValue,
+        value_in_cents: giftcard.value_in_cents,
     };
 };
 

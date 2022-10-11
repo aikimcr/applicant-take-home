@@ -9,7 +9,7 @@ interface CheckoutOptionsButtonsProps {
     onClick: () => void;
 }
 
-const CheckoutOptionButton: React.FC<CheckoutOptionsButtonsProps> = ({
+export const CheckoutOptionButton: React.FC<CheckoutOptionsButtonsProps> = ({
     giftcard,
     onClick,
     isChecked,
